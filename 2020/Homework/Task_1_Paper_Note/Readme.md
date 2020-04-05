@@ -12,6 +12,10 @@
 `009528-Deep Learning for Classification of Malware System Call Sequences`
 给大家提供了一个模板供大家参考。
 
+### DDL
+
+请大家在2020/5/1日前提交本次作业笔记。
+
 ### 相关参考资料如下
 
 -   [Markdown学习资料](https://www.appinn.com/markdown/)
