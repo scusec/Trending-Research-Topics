@@ -1,4 +1,4 @@
--   笔记作者：2017141531032 傅康
+-   笔记作者：Rershall
 -   原文作者：Jehyun Lee, Pingxiao Ye, Ruofan Liu, Dinil Mon Divakaran, Mun Choon Chan
 -   原文题目：Building Robust Phishing Detection System: an Empirical Analysis
 -   原文来源：NDSS 2020 - Network and Distributed System Security Symposium
