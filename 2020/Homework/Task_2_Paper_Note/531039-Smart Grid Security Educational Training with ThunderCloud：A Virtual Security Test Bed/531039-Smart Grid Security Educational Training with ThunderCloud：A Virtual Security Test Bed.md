@@ -3,7 +3,7 @@
 - Author：Lindah Kotut、Luay A. Wahsheh 
 - Reference：InfoSecCD'13：Proceedings of the 2013 on InfoSecCD'13：Information Security Curriculum Development Coference
 - https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7942422
-- 由健林 2017141531039
+- Youyi
 
 ### 主要内容
 
