@@ -32,11 +32,11 @@
 
 网络中的对等方由nodeID标识，该ID是512位ECDSA加密公钥。利用计算机启动具有不同nodeID的多个以太坊节点很容易。对于一个节点，通常需要执行的是运行ECDSA密钥生成算法。但是，该算法将不会检查nodeID是否对应于唯一的网络地址。因此，理论上可以在具有相同IP地址的多台机器上运行无限数量的节点。
 
-在点对点网络连接中，UDP用于查找其他对等点，并进一步建立连接通道以交换分类帐信息。所有分类帐信息都是通过加密并经过身份验证的TCP连接传输的。UDP连接最多可同时建立16个，并且UDP连接的总数不受限制。TCP连接的限制是Maxpeers，默认情况下设置为25。有2组UDP消息。ping消息请求pong返回消息。这对消息用于检查邻居节点是否处于活动状态。一个findnode消息请求邻居消息，其中包含响应节点已找到的16个节点的列表。仅当查询节点已经在其db中时，该节点才会响应findnode请求，这是一种网络信息存储。要通过垄断连接使节点不能发挥作用，攻击者必须反复占据受害者TCP连接的所有Maxpeers。仅当客户端在开始时允许/设置TCP连接时，TCP连接才可以传出。否则，它将默认设置为传入连接。传出TCP连接最多可以启动![image-20200428163607124](C:\Users\20181\AppData\Roaming\Typora\typora-user-images\image-20200428163607124.png)与客户的其他同行。但是，在Geth v1.8之前，除了Maxpeers之外，对未经请求的传入TCP连接的数量没有限制。这意味着节点的TCP连接的Maxpeers都可以是未经请求的传入连接。
+在点对点网络连接中，UDP用于查找其他对等点，并进一步建立连接通道以交换分类帐信息。所有分类帐信息都是通过加密并经过身份验证的TCP连接传输的。UDP连接最多可同时建立16个，并且UDP连接的总数不受限制。TCP连接的限制是Maxpeers，默认情况下设置为25。有2组UDP消息。ping消息请求pong返回消息。这对消息用于检查邻居节点是否处于活动状态。一个findnode消息请求邻居消息，其中包含响应节点已找到的16个节点的列表。仅当查询节点已经在其db中时，该节点才会响应findnode请求，这是一种网络信息存储。要通过垄断连接使节点不能发挥作用，攻击者必须反复占据受害者TCP连接的所有Maxpeers。仅当客户端在开始时允许/设置TCP连接时，TCP连接才可以传出。否则，它将默认设置为传入连接。传出TCP连接最多可以启动![](https://pic.downk.cc/item/5ea991ccc2a9a83be57647bd.png)与客户的其他同行。但是，在Geth v1.8之前，除了Maxpeers之外，对未经请求的传入TCP连接的数量没有限制。这意味着节点的TCP连接的Maxpeers都可以是未经请求的传入连接。
 
 邻居节点的信息存储在两个数据结构中。db是存储节点的信息，一个客户端已被键合的长期数据库。如果节点在收到ping消息后返回有效且相应的pong响应，则它将被绑定。db的大小没有限制。每个数据库条目包括一个节点ID，IP地址，TCP端口，UDP端口，从该节点发送的最后一次ping的时间，在该节点上收到的最后一个pong的时间以及该节点无法响应findnode的次数。
 
-该表中有256个存储桶，其中每个存储桶由条目。它说明了网络信息存储。每个条目存储Ethereum节点信息，包括nodeID，IP地址，TCP端口和UDP端口。将新节点添加到存储桶后，它通过logdist函数进行映射，该函数是对Kademlia协议中XOR指标的修改。该logdist功能用于测量两个nodeIDs之间的距离。![图。1](https://ars.els-cdn.com/content/image/1-s2.0-S0167404818313798-gr1.jpg)
+该表中有256个存储桶，其中每个存储桶由条目。它说明了网络信息存储。每个条目存储Ethereum节点信息，包括nodeID，IP地址，TCP端口和UDP端口。将新节点添加到存储桶后，它通过logdist函数进行映射，该函数是对Kademlia协议中XOR指标的修改。该logdist功能用于测量两个nodeIDs之间的距离。![](https://pic.downk.cc/item/5ea99200c2a9a83be5767508.jpg)
 
 ### 构建eclipse攻击模型
 
@@ -76,7 +76,7 @@
 
    受害者的表被攻击者插入精心设计的nodeID。受害者在这里很可能形成与攻击者节点的所有传出连接。
 
-![image-20200428171548646](C:\Users\20181\AppData\Roaming\Typora\typora-user-images\image-20200428171548646.png)
+![](https://pic.downk.cc/item/5ea9921fc2a9a83be57698c6.png)
 
 ### 基于随机森林分类的检测模型
 
@@ -84,7 +84,7 @@
 
 训练检测模型的过程如图所示。首先，从训练UDP数据包中提取特征向量。接下来，使用训练数据集训练随机森林分类器，该数据集结合了特征向量及其对应的标签。最后，使用新的UDP数据包测试模型。为此，执行与训练数据集相同的特征提取过程，并馈入特征向量以进行最终预测。将这些预测用作预期的标签。
 
-![image-20200428172023189](C:\Users\20181\AppData\Roaming\Typora\typora-user-images\image-20200428172023189.png)
+![](https://pic.downk.cc/item/5ea9923ac2a9a83be576bf44.png)
 
 #### 分类特征
 
@@ -109,25 +109,11 @@
 
 #### RFC模型训练
 
-通过计算到达Ω节点的训练样本集，获得分类标准h（x，θ）∈{0，1}。在这里，我们让X  ∈  [R 米代表训练样本，θ  ∈{ φ，ψ }是该弱分类器的参数，φ（ψ）是过滤器功能，ψ是一个列向量参数或矩阵参数，和θ确定弱分类器的分类超平面的模式。
-
-![image-20200428173935194](C:\Users\20181\AppData\Roaming\Typora\typora-user-images\image-20200428173935194.png)
-
-![image-20200428173923317](C:\Users\20181\AppData\Roaming\Typora\typora-user-images\image-20200428173923317.png)
-
-![image-20200428173826672](C:\Users\20181\AppData\Roaming\Typora\typora-user-images\image-20200428173826672.png)
-
-RFC模型训练过程如下。在模型训练过程中，训练*n个*决策树。首先通过使用函数从训练集*T中*重新采样*p个*样本来获得样本集*T* '，然后获得特征集*Att*。其次，我们从特征集中*Att*采样了*k个*特征而不进行替换。而T'“保持*ATT* '包含的功能。最终，我们可以构建数组*DT*。
+![](https://pic.downk.cc/item/5ea99273c2a9a83be5770549.png)
 
 #### RFC模型分类
 
-x属于c的概率：![image-20200428174157352](C:\Users\20181\AppData\Roaming\Typora\typora-user-images\image-20200428174157352.png)
-
-x类别的决策：![image-20200428174220816](C:\Users\20181\AppData\Roaming\Typora\typora-user-images\image-20200428174220816.png)
-
-模型分类过程如下：
-
-![image-20200428174317273](C:\Users\20181\AppData\Roaming\Typora\typora-user-images\image-20200428174317273.png)
+![](https://pic.downk.cc/item/5ea992bec2a9a83be5775853.png)
 
 ### 攻击检测模型的实验表现
 
@@ -151,15 +137,11 @@ x类别的决策：![image-20200428174220816](C:\Users\20181\AppData\Roaming\Typ
 
    正常的和恶意攻击的分组具有不同的大小分布的分组。要使正常节点透明，攻击者必须向受害者发送许多ping请求。与findnode，neighbors类型的数据包相比，ping，pong类型的数据包将具有较少的数据信息。因此，它们的大小具有不同的分布。
 
-   ![image-20200428175013927](C:\Users\20181\AppData\Roaming\Typora\typora-user-images\image-20200428175013927.png)
-
-   攻击访问消耗了更高的时间复杂度。这表明为短连接建立了正常访问。如果受害人无法按时向攻击者打*乒乓球*，则攻击者可以等待更长的时间。
-
-   ![image-20200428175032863](C:\Users\20181\AppData\Roaming\Typora\typora-user-images\image-20200428175032863.png)
+   攻击访问消耗了更高的时间复杂度。这表明为短连接建立了正常访问。如果受害人无法按时向攻击者ping、pong，则攻击者可以等待更长的时间。
 
    当一个节点遭受日食攻击时，存在更高的访问频率。因为，为了使受害者透明，必须将*ping*请求重复发送给受害者。繁忙的交流可被视为日食攻击的迹象。
 
-   ![image-20200428175043761](C:\Users\20181\AppData\Roaming\Typora\typora-user-images\image-20200428175043761.png)
+   
 
 4. 检测
 
@@ -167,7 +149,6 @@ x类别的决策：![image-20200428174220816](C:\Users\20181\AppData\Roaming\Typ
 
    通过随机森林分类，检测的准确率和召回率分别为72％和93％，在实践中相对较高。实验结果表明，大约三分之一的已检查攻击数据可以击中其地面标签。同时，可以正确识别所有恶意数据的90％以上，这意味着作者的检测模型可以阻止大多数攻击数据包。
 
-   ![image-20200428175346100](C:\Users\20181\AppData\Roaming\Typora\typora-user-images\image-20200428175346100.png)
 
 
 
