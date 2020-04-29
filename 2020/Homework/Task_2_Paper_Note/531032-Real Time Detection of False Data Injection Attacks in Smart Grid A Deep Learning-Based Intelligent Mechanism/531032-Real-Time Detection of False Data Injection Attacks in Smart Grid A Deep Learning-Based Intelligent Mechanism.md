@@ -1,4 +1,4 @@
--   笔记作者：2017141531032 傅康
+-   笔记作者：Rershall
 -   原文作者：[Youbiao He ](https://ieeexplore.ieee.org/author/37085906715); [Gihan J. Mendis ](https://ieeexplore.ieee.org/author/37085895544); [Jin Wei](https://ieeexplore.ieee.org/author/38490656200)
 -   原文题目：Real-Time Detection of False Data Injection Attacks in Smart Grid: A Deep Learning-Based Intelligent Mechanism
 -   原文来源：[IEEE Transactions on Smart Grid](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5165411) ( Volume: 8 , [Issue: 5](https://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber=8013887) , Sept. 2017 )

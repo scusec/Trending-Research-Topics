@@ -1,7 +1,7 @@
 # Real-Time Detection of False Data Injection Attacks in Smart Grid: A Deep Learning-Based Intelligent Mechanism
 
 ## 笔记作者
-2017141531079 刘嘉镱
+Sakura
 
 ## 基本信息
 
@@ -25,7 +25,7 @@
 
 
 ## 主要内容
-  
+
   本文提出了一种基于深度学习的FDI攻击实时检测方案。通过建立优化模型，提出了一种以电力盗窃为目的的FDI攻击。本文提出的方案利用条件深度信念网络(CDBN)，有效揭示了避开SVE机制的不可观测FDI攻击的高维时间行为特征，利用捕获的行为特征来实时检测潜在的FDI攻击。本文通过IEEE 118总线测试系统的仿真，验证了该策略的有效性，还使用ieee300总线测试系统评估了所提出的检测机制的可扩展性。本文所提出的检测机制有效地放宽了对潜在攻击场景的假设，并实现了较高精度。
 
 
