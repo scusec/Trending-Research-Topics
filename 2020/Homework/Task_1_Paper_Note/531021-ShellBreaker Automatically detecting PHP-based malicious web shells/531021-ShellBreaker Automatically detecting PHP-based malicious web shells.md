@@ -23,7 +23,7 @@
 - 遍历AST以识别结构感知的语言功能，例如敏感的API以及这些API与特定语句之间的关联。
 - 实现了对AST进行轻量级污点分析的解释器，旨在揭示和表征从超全局变量到敏感操作的显式和隐式数据流。
 
-![](.\The architectural overview of SheelBreaker.png)
+![](https://github.com/scusec/Trending-Research-Topics/blob/master/2020/Homework/Task_1_Paper_Note/531021-ShellBreaker%20Automatically%20detecting%20PHP-based%20malicious%20web%20shells/The%20architectural%20overview%20of%20SheelBreaker.png)
 
 #### 3.主要内容
 
