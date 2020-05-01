@@ -31,15 +31,15 @@
 
 作者进而根据调查的数据总结出了导致隐私设置过于隐秘难以被用户找到的六种原因：
 
-![image-20200423155939504](C:\Users\WhileBug\AppData\Roaming\Typora\typora-user-images\image-20200423155939504.png)
+![image-01-01](image-01-01.png)
 
 接着，作者根据收集到的数据和总结出来的六种原因构造隐藏的隐私设置的特征：
 
-![image-20200423160034593](C:\Users\WhileBug\AppData\Roaming\Typora\typora-user-images\image-20200423160034593.png)
+![image-01-02](image-01-02.png)
 
 基于构造的特征，作者团队开始开发HOUND这一工具：
 
-![image-20200423160115716](C:\Users\WhileBug\AppData\Roaming\Typora\typora-user-images\image-20200423160115716.png)
+![image-01-03](image-01-03.png)
 
 HOUND，中文意思为“猎狗”，意思就是“猎捕”移动应用中的用户隐私设置。HOUND主要分为两大模块：
 
@@ -48,13 +48,13 @@ HOUND，中文意思为“猎狗”，意思就是“猎捕”移动应用中的
 
 在HOUND这一工具开发完毕后，作者利用HOUND对之前调查的移动应用进行识别，得到的结果：
 
-![image-20200423161009748](C:\Users\WhileBug\AppData\Roaming\Typora\typora-user-images\image-20200423161009748.png)
+![image-01-04](image-01-04.png)
 
 从上图来看，HOUND的挖掘效果很不错，并且效率也很好，耗时不长。
 
 接着，作者也提出了从2017-2018间隐藏的用户隐私设置的现状：
 
-![image-20200423161154737](C:\Users\WhileBug\AppData\Roaming\Typora\typora-user-images\image-20200423161154737.png)
+![image-01-05](image-01-05.png)
 
 从上表我们可以发现，无论是包含隐藏的用户隐私设置的APP的比率还是隐藏的用户隐私设置数量都增加了，这说明这种现象对用户隐私的侵害更加严重了。
 
