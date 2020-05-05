@@ -16,24 +16,24 @@
 ## 3、论文主要创新点    
 ### 我认为本文在构建检测算法时，综合了横向与纵向对比，构建了很好的模型
 * 对于同一用户，引入犯罪学的调查，基于累犯概率的分析（如图-1）针对用户过往记录赋予不同的置信度
-  <img src="https://pic.downk.cc/item/5e91c458504f4bcb04d95a3b.jpg" > 
+  ![](https://pic.downk.cc/item/5e91c458504f4bcb04d95a3b.jpg)
   <p align="center">图1</p>
 * 对于具有相同预测性质的不同用户，对比其检测数据的差异（如图-2）来分析异常
-  <img src="https://pic.downk.cc/item/5e91c47b504f4bcb04d97c04.jpg"> 
+  ![](https://pic.downk.cc/item/5e91c47b504f4bcb04d97c04.jpg)
   <p align="center">图2</p>
 * 单独检测与二叉树算法结合（如图-3），进而实现了算法复杂度与精度之间的权衡
-  <img src="https://pic.downk.cc/item/5e91c49d504f4bcb04d99fe4.jpg"> 
+  ![](https://pic.downk.cc/item/5e91c49d504f4bcb04d99fe4.jpg)
   <p align="center">图3</p>
 
 
 ## 4、论文的缺点
 
 1. 在对有犯罪记录（窃电）用户进行累犯率r(i,t)进行归一化时，作者选用的是Sigmoid函数（如图-4）。但可以在前文的数据（如图-1）中得知，犯罪记录信息是离散的，Sigmoid函数并非最佳选择
-   <img src="https://pic.downk.cc/item/5e91c3d3504f4bcb04d8d8b2.jpg">
+   ![](https://pic.downk.cc/item/5e91c3d3504f4bcb04d8d8b2.jpg)
    <p align="center">图4</p>
 
 2. 在对用户可能的犯罪率s(i,t)进行评估时，作者考虑到了随着观测时间增长，偏离风险h(i,t)（即该时间内用户的电量消耗实际观测值与预测值相差巨大）所占的权重应不断上升，因此得出如图-5所示的公式。但是，我认为(1-μ)该变量并不适合
-  <img src="https://pic.downk.cc/item/5e91baa7504f4bcb04cf13b1.jpg">
+   ![](https://pic.downk.cc/item/5e91baa7504f4bcb04cf13b1.jpg)
   <p align="center">图5</p>
    
 
