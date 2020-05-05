@@ -1,11 +1,11 @@
 #论文标题
-##Research and Application of Smart Grid Early Warning Decision Platform Based on Big Data Analysis
+Research and Application of Smart Grid Early Warning Decision Platform Based on Big Data Analysis
 #作者
-##Liping Fan, Jindong Li, Yu Pan, Sheng Wang , Chao Yan , Di Yao  State Grid Hubei Electric Power Co., Ltd. Yichang Power Supply Company，Yichang, Hubei，China
+Liping Fan, Jindong Li, Yu Pan, Sheng Wang , Chao Yan , Di Yao  State Grid Hubei Electric Power Co., Ltd. Yichang Power Supply Company，Yichang, Hubei，China
 #刊物出处
-##2019 International Conference on Intelligent Green Building and Smart Grid (IGBSG2019), 6-9 Sept., Yichang China
+2019 International Conference on Intelligent Green Building and Smart Grid (IGBSG2019), 6-9 Sept., Yichang China
 #原文链接
-##https://ieeexplore.ieee.org/document/8886291/
+https://ieeexplore.ieee.org/document/8886291/
 #内容总结
 （针对什么问题，做了什么工作，实现了什么目标，100-200）
 
