@@ -32,18 +32,18 @@
 
 1. WTA(Wave to API)攻击实验结果。
 
-   ![](img\3.png)
+   ![](img/3.png)
 
    - Success Rate表示语音可以被正确解码的概率。
    - SNR（dB）是用于衡量对原始音频干扰程度的数学量，SNR越大，表示干扰越小。 
 
 2. 同理，WAA attack(WAV-Air-API)实验结果如下图。
 
-   ![](img\4.png)
+   ![](img/4.png)
 
    原始音频和合成攻击命令之后音频的SNR曲线如下图
 
-   ![](img\5.png)
+   ![](img/5.png)
 
    #### 检测
 
