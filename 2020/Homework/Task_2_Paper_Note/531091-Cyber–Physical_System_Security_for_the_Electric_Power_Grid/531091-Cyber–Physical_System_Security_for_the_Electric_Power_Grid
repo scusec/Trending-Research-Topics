@@ -1,0 +1,27 @@
+## 论文信息
+- 论文题目： `Cyber–Physical System Security for the Electric Power Grid`
+- 作者：Siddharth Sridhar, Adam Hahn, Manimaran Govindarasu
+- 论文来源：`Proceedings of the IEEE`
+- 论文地址：`https://ieeexplore.ieee.org/abstract/document/6032699`
+- 本笔记的作者：Gary
+
+-----
+
+## 摘要
+
+The development of a trustworthy smart grid requires a deeper understanding of potential impacts resulting from successful cyber attacks. Estimating feasible attack impact requires an evaluation of the grid’s dependency on its cyber infrastructure and its ability to tolerate potential failures.
+
+A further exploration of the cyber–physical relationships within the smart grid and a specific review of possible attack vectors is necessary to determine the adequacy of cybersecurity efforts.
+This paper highlights the significance of cyber infrastructure security in conjunction with power application security to prevent, mitigate, and tolerate cyber attacks.
+
+A layered approach is introduced to evaluating risk based on the security of both the physical power applications and the supporting cyber infrastructure. 
+
+A classification is presented to highlight dependencies between the cyber–physical controls required to support the smart grid and the communication and computations that must be protected from cyber attack. The paper then presents current research efforts aimed at enhancing the smart grid’s application and infrastructure security. Finally, current challenges are identified to facilitate future research efforts.
+
+## 图
+
+![pic1](pic1.png)
+
+## 创新点
+- 本文确定了将电力应用安全性与支持相结合的重要性，将基础设施安全纳入风险评估流程，并提供一种评估影响的方法。
+- 聪明地引入网格控制分类，以清楚地识别和支持这些控制功能所需的通信技术和控制消息
